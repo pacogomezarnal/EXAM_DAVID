@@ -12,6 +12,7 @@ public class IngresoLaby {
 	private final static String COD_COL="cod";
 	
 	//Conexion
+	private static IngresoLaby instance = new IngresoLaby();
 	private Connection conexion = null;// maneja la conexió
 	private Statement instruccion = null;
 	private ResultSet conjuntoResultados = null;
@@ -49,6 +50,10 @@ public class IngresoLaby {
 				excepcionSql.printStackTrace();
 			}
 		}	
+	}
+	
+	public static IngresoLaby getInstance() {
+		return instance;
 	}
 
 }

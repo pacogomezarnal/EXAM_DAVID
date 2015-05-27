@@ -3,7 +3,7 @@ package Model;
 //Clase que almacenará todos los datos de un cadete
 public class Cadete {
 	//Propiedades
-	private int id=0;
+	private int id=2;
 	private String nombre="";
 	private String apellidos="";
 	private int edad=0; 
@@ -28,6 +28,12 @@ public class Cadete {
 		this.nacionalidad=nacionalidad;
 		this.equipo=equipo;
 		
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.nombre;
 	}
 
 	public int getId() {
