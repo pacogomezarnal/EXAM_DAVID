@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import Controlador.ControladorPrincipal;
 
 public class VistaComprobacion extends JPanel{
+	
 	private JTextField textId;
 	private JTextField textApellido1;
 	private JTextField textMensaje;
@@ -31,25 +32,25 @@ public class VistaComprobacion extends JPanel{
 	public void componentes(){
 
 		JLabel lblId = new JLabel("Id");
-		lblId.setBounds(53, 62, 46, 14);
+		lblId.setBounds(138, 135, 46, 14);
 		add(lblId);
 		
 		textId = new JTextField();
-		textId.setBounds(53, 87, 86, 20);
+		textId.setBounds(138, 160, 86, 20);
 		add(textId);
 		textId.setColumns(10);
 		
 		JLabel lblerApellido = new JLabel("1er Apellido");
-		lblerApellido.setBounds(217, 62, 100, 14);
+		lblerApellido.setBounds(423, 135, 100, 14);
 		add(lblerApellido);
 		
 		textApellido1 = new JTextField();
-		textApellido1.setBounds(217, 87, 86, 20);
+		textApellido1.setBounds(423, 160, 86, 20);
 		add(textApellido1);
 		textApellido1.setColumns(10);
 		
 		JButton btnComprobar = new JButton("COMPROBAR");
-		btnComprobar.setBounds(53, 152, 250, 23);
+		btnComprobar.setBounds(138, 216, 371, 23);
 		btnComprobar.addActionListener(new ActionListener() {
 			
 			@Override
@@ -61,12 +62,12 @@ public class VistaComprobacion extends JPanel{
 		add(btnComprobar);
 		
 		textMensaje = new JTextField();
-		textMensaje.setBounds(53, 215, 250, 20);
+		textMensaje.setBounds(138, 250, 371, 20);
 		add(textMensaje);
 		textMensaje.setColumns(10);
 		
 		JButton btnAtras = new JButton("<< Atr\u00E1s");
-		btnAtras.setBounds(53, 348, 89, 23);
+		btnAtras.setBounds(53, 427, 89, 23);
 		btnAtras.addActionListener(new ActionListener() {
 			
 			@Override

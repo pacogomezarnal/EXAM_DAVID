@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import Controlador.ControladorPrincipal;
 
 public class VistaPerfil extends JPanel{
+	
 	private JTextField textNombre;
 	private JTextField textId;
 	private JTextField textApellidos;
@@ -88,7 +89,7 @@ public class VistaPerfil extends JPanel{
 		textNacionalidad.setColumns(10);
 		
 		JButton btnSiguiente = new JButton("Siguiente >>");
-		btnSiguiente.setBounds(344, 353, 128, 23);
+		btnSiguiente.setBounds(344, 427, 128, 23);
 		btnSiguiente.addActionListener(new ActionListener() {
 			
 			@Override

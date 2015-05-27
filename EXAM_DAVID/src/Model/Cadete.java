@@ -3,7 +3,7 @@ package Model;
 //Clase que almacenará todos los datos de un cadete
 public class Cadete {
 	//Propiedades
-	private int id=2;
+	private int id=0;
 	private String nombre="";
 	private String apellidos="";
 	private int edad=0; 

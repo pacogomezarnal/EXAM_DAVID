@@ -9,17 +9,20 @@ import java.awt.event.ItemListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JTable;
 import javax.swing.JButton;
+import javax.swing.MutableComboBoxModel;
 
 import Controlador.ControladorPrincipal;
 import Model.Cadete;
 
 public class VistaEquipo extends JPanel{
+	
 	private JTextField textNombre;
 	private JTextField textId;
 	private JTextField textApellido1;
@@ -42,14 +45,14 @@ public class VistaEquipo extends JPanel{
 		comboBox = new JComboBox<Cadete>();
 		comboBox.setBounds(70, 71, 128, 20);
 		add(comboBox);
-		comboBox.setSelectedItem(-1);
+		comboBox.setSelectedIndex(-1);
 		comboBox.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				try {
-					if(comboBox.getSelectedIndex() > 0){		
+				try {		
+					if(comboBox.getSelectedIndex() > 0){
 						ControladorPrincipal.getInstance().cargarDatosCadete();
 					}
 				} catch (SQLException e1) {

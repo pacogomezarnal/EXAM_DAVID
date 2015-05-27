@@ -17,7 +17,7 @@ public class ControladorPrincipal {
 	private CadetesModel cm;
 	private Cadete cadete;
 	private IngresoLaby il;
-	
+
 	private ControladorPrincipal(){
 		va = new VistaApp();
 		cm = CadetesModel.getInstance();
@@ -30,11 +30,11 @@ public class ControladorPrincipal {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static ControladorPrincipal getInstance() {
 		return instance;
 	}
-	
+
 	public void mostrarPerfil() {
 		// TODO Auto-generated method stub
 		CardLayout c = (CardLayout) va.getContentPane().getLayout();
@@ -46,13 +46,13 @@ public class ControladorPrincipal {
 		CardLayout c = (CardLayout) va.getContentPane().getLayout();
 		c.show(va.getContentPane(), "VistaEquipo");
 	}
-	
+
 	public void mostrarComprobacion() {
 		// TODO Auto-generated method stub
 		CardLayout c = (CardLayout) va.getContentPane().getLayout();
 		c.show(va.getContentPane(), "VistaComprobacion");
 	}
-	
+
 	public void cargarDatosPerfil() throws SQLException{
 		cadete = cm.perfil();
 		va.getVistaPerfil().getTextNombre().setText(cadete.getNombre());
@@ -61,12 +61,12 @@ public class ControladorPrincipal {
 		va.getVistaPerfil().getTextEdad().setText(Integer.toString(cadete.getEdad()));
 		va.getVistaPerfil().getTextNacionalidad().setText(cadete.getNacionalidad());
 	}
-	
+
 	public void cargarDatosEquipo() throws SQLException{
 		ArrayList<Cadete> cadetes = cm.equipo();
 		va.getVistaEquipo().cargarDatosEquipo(cadetes);
 	}
-	
+
 	public void cargarDatosCadete() throws SQLException{
 		cadete = (Cadete) va.getVistaEquipo().getComboBox().getSelectedItem();
 		String nombre = cadete.getNombre();
@@ -78,7 +78,7 @@ public class ControladorPrincipal {
 		va.getVistaEquipo().getTextId().setText(Integer.toString(cadete.getId()));
 		va.getVistaEquipo().getTextNacionalidad().setText(cadete.getNacionalidad());
 	}
-	
+
 	public void comprobar(){
 		int index = Integer.parseInt(va.getVistaComprobacion().getTextId().getText());
 		String apellido = va.getVistaComprobacion().getTextApellido1().getText();
